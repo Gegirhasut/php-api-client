@@ -9,7 +9,7 @@ Rutube PHP API Client
 Установка через composer:
 
 ```sh
-composer require "Gegirhasut/php-api-client: 1.0.*"
+composer require "gegirhasut/php-api-client"
 ```
 
 ## Использование
