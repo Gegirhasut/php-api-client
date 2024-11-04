@@ -6,7 +6,7 @@
     "api",
     "client"
   ],
-  "description": "PHP client for Rutube api (http://rutube.ru)",
+  "description": "PHP client for Rutube api (http://rutube.ru). Fork from (https://github.com/rutube/php-api-client).",
   "type": "library",
   "authors": [
     {

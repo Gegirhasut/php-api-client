@@ -152,8 +152,5 @@ $ composer update
 $ composer test
 ```
 
-## Документация по API
-[dev.rutube.ru](http://dev.rutube.ru/)
-
-## Документация по библиотеке
+## Документация по библиотеке (не полная)
 [rutube.github.io/php-api-client](http://rutube.github.io/php-api-client/)
