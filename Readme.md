@@ -9,7 +9,7 @@ Rutube PHP API Client
 Установка через composer:
 
 ```sh
-composer require "rutube/php-api-client: 1.0.*"
+composer require "Gegirhasut/php-api-client: 1.0.*"
 ```
 
 ## Использование
@@ -39,6 +39,7 @@ $isHidden   = 0;
 $categoryId = 13;
 
 // Чтобы узнать о состоянии загружаемого видео после конвертации, нужно задать callback-урлы:
+// :TODO: Не работали эти функции, не разбирался. Лучше пользоваться getVideo($video_id)
 $callback_url = 'http://host.host/success'; // В случае успешной загрузки и конвертации видео в теле запроса будут переданы данные видео.
 $errback_url  = 'http://host.host/error';   // В случае ошибки загрузки и конвертации в теле запроса будут сведения об ошибке.
 

@@ -1,5 +1,5 @@
 {
-  "name": "rutube/php-api-client",
+  "name": "Gegirhasut/php-api-client",
   "keywords": [
     "rutube",
     "sdk",
@@ -10,7 +10,7 @@
   "type": "library",
   "authors": [
     {
-      "name": "Rutube Team"
+      "name": "Gegirhasut (YouToRutube.com)"
     }
   ],
   "license": "Apache 2.0",
