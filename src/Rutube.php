@@ -120,6 +120,40 @@ class Rutube
     }
 
     /**
+     * Получение списка плейлистов
+     * @param int $allow_owner_empty
+     * @return mixed
+     * @throws Exceptions\ConnectionErrorException
+     */
+    public function getPlayLists($allow_owner_empty = 1) {
+        $account = $this->account();
+        $visitor = $account->getVisitor();
+
+        return $this->getTransport()->getPlayLists($visitor->id, $allow_owner_empty);
+    }
+
+    /**
+     * Добавление в плейлист
+     * @param $id
+     * @param array $video_ids
+     * @return boolean
+     */
+    public function addToPlayList($id, $video_ids) {
+        $params = ['video_ids' => []];
+        foreach ($video_ids as $video_id) {
+            $params['video_ids'][] = $video_id;
+        }
+
+        try {
+            $this->getTransport()->addToPlayList($id, $params);
+        } catch (\Exception $ex) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
      * Возвращает текущий транспорт
      *
      * @return Transport

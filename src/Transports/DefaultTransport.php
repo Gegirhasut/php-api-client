@@ -195,6 +195,32 @@ class DefaultTransport extends Transport
     }
 
     /**
+     * @param $userId
+     * @param int $allow_owner_empty
+     * @param string $include_entity_types
+     * @return mixed
+     * @throws \Rutube\Exceptions\ConnectionErrorException
+     */
+    public function getPlayLists($userId, $allow_owner_empty = 1, $include_entity_types = 'playlist')
+    {
+        return $this->call('GET', 'api/v2/playlist/user/' . $userId . "/?allow_owner_empty=$allow_owner_empty&include_entity_types=$include_entity_types");
+    }
+
+    public function addToPlayList($id, $params)
+    {
+        return $this->call('POST', 'api/playlist/custom/' . $id . '/', $params);
+    }
+
+    /**
+     * @return mixed
+     * @throws \Rutube\Exceptions\ConnectionErrorException
+     */
+    public function getVisitor()
+    {
+        return $this->call('GET', 'api/v2/accounts/visitor/?client=vulp');
+    }
+
+    /**
      * @param string $id
      * @param array $params
      * @return mixed

@@ -18,4 +18,13 @@ namespace Rutube;
  */
 class Account extends Entity
 {
+    /**
+     * Получение данных аккаунта
+     *
+     * @return \stdClass
+     */
+    public function getVisitor()
+    {
+        return $this->getTransport()->getVisitor();
+    }
 }

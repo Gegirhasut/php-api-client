@@ -70,6 +70,13 @@ $video->publication($data->video_id, '2015-01-16 20:36:31');
 // Получить видео:
 $video->getVideo($data->video_id);
 
+// Получить список плейлистов:
+$playlists = $rutube->getPlayLists();
+
+// Добавить видео в плейлист:
+$video_id = $video->id;
+$res = $rutube->addToPlayList($playlists->results[0]->id, [$video_id]);
+
 
 /**
  * Работа с данными, не требующими авторизации
